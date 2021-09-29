@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace CalculadoraBasica
 {
@@ -29,22 +17,22 @@ namespace CalculadoraBasica
         {
             try
             {
-                if (Operador.Text.Equals("+"))
+                if (OperadorTextBox.Text.Equals("+"))
                 {
-                    Resultado.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) + Convert.ToInt32(Operando2.Text));
+                    ResultadoTextBox.Text = Convert.ToString(Convert.ToInt32(Operando1TextBox.Text) + Convert.ToInt32(Operando2TextBox.Text));
                 }
-                else if (Operador.Text.Equals("-"))
+                else if (OperadorTextBox.Text.Equals("-"))
                 {
-                    Resultado.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) - Convert.ToInt32(Operando2.Text));
+                    ResultadoTextBox.Text = Convert.ToString(Convert.ToInt32(Operando1TextBox.Text) - Convert.ToInt32(Operando2TextBox.Text));
                 }
 
-                else if (Operador.Text.Equals("*"))
+                else if (OperadorTextBox.Text.Equals("*"))
                 {
-                    Resultado.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) * Convert.ToInt32(Operando2.Text));
+                    ResultadoTextBox.Text = Convert.ToString(Convert.ToInt32(Operando1TextBox.Text) * Convert.ToInt32(Operando2TextBox.Text));
                 }
-                else if (Operador.Text.Equals("/"))
+                else if (OperadorTextBox.Text.Equals("/"))
                 {
-                    Resultado.Text = Convert.ToString(Convert.ToInt32(Operando1.Text) / Convert.ToInt32(Operando2.Text));
+                    ResultadoTextBox.Text = Convert.ToString(Convert.ToInt32(Operando1TextBox.Text) / Convert.ToInt32(Operando2TextBox.Text));
                 }
             }
             catch(Exception err)
@@ -55,10 +43,10 @@ namespace CalculadoraBasica
 
         private void Button_Limpiar(object sender, RoutedEventArgs e)
         {
-            Operando1.Clear();
-            Operando2.Clear();
-            Operador.Clear();
-            Resultado.Clear();
+            Operando1TextBox.Clear();
+            Operando2TextBox.Clear();
+            OperadorTextBox.Clear();
+            ResultadoTextBox.Clear();
         }
 
         private void EntradaTexto (object sender, RoutedEventArgs e)
@@ -68,20 +56,14 @@ namespace CalculadoraBasica
 
         private void ComprobarOperador()
         {
-            try { 
-            if (Operador.Text.Equals("+") || Operador.Text.Equals("-")
-                || Operador.Text.Equals("*") || Operador.Text.Equals("/"))
+            if (OperadorTextBox.Text.Equals("+") || OperadorTextBox.Text.Equals("-")
+                || OperadorTextBox.Text.Equals("*") || OperadorTextBox.Text.Equals("/"))
             {
-                Calcular.IsEnabled = true;
+                CalcularButton.IsEnabled = true;
             }
             else
             {
-                Calcular.IsEnabled = false;
-            }
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
+                CalcularButton.IsEnabled = false;
             }
         }
     }

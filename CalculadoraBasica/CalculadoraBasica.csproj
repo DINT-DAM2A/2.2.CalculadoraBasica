@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>numbers.ico</ApplicationIcon>
+    <ApplicationIcon>img\numbers.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,9 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\numbers.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="numbers.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
