@@ -1,0 +1,10 @@
+2. Desarrollar una aplicación para realizar cálculos matemáticos básicos,
+teniendo en cuenta las siguientes indicaciones:
+• Las posibles operaciones serán +, -, * y /
+• El cuadro de texto para el resultado será de solo lectura
+• El botón Calcular solo estará habilitado si hay un operador correcto
+• El botón Calcular será el botón por defecto y el botón Limpiar el botón de
+cancelación (tecla Escape).
+• Se deberán controlar las posibles excepciones al realizar la operación.
+Informar al usuario si se produce un error con un MessageBox.
+Nombre del proyecto: 2.2.CalculadoraBasica
